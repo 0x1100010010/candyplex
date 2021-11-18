@@ -13,12 +13,7 @@ module.exports = {
   // config (optional)
   daisyui: {
     styled: true,
-    themes: [
-      'emerald', // first one will be the default theme
-      'dark',
-      'forest',
-      'synthwave'
-    ],
+    themes: true,
     base: true,
     utils: true,
     logs: true,

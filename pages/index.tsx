@@ -6,7 +6,7 @@ import Header from '../components/header'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-theme="bumblebee">
       <Head>
         <title>Candyplex</title>
         <meta name="description" content="Candy Machine + Metaplex" />
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="my-3">
         <Header></Header>
-        </div>
+      </div>
       <main className={styles.main} >
 
 
@@ -30,6 +30,13 @@ const Home: NextPage = () => {
           <div className="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div>
           <div className="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div>
           <div className="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
+        </div>
+
+
+
+
+        <div>
+ 
         </div>
       </main>
 

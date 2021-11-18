@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import Themer from './themer'
 
 export default class Header extends Component {
     render() {
@@ -26,25 +24,8 @@ export default class Header extends Component {
                             </a>
                         </div>
                     </div>
-                    <div className="dropdown dropdown-left ">
-                        <button tabindex="0" className="btn btn-square btn-ghost m-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
-                        </button>
-                        <ul tabindex="0" class="p-1 shadow menu dropdown-content bg-base-100 rounded-box w-52">
-                            <li>
-                                <a>Item 1</a>
-                            </li>
-                            <li>
-                                <a>Item 2</a>
-                            </li>
-                            <li>
-                                <a>Item 3</a>
-                            </li>
-                        </ul>
 
-                    </div>
+                    <Themer></Themer>
                 </div>
             </div>
 
