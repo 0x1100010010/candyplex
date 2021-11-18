@@ -21,6 +21,11 @@ const Home: NextPage = () => {
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
+        <div>
+          <div className="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div>
+          <div className="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div>
+          <div className="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
+        </div>
       </main>
 
       <footer className={styles.footer}>
