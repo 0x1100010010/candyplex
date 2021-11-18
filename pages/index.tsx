@@ -3,13 +3,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {Header} from '../components/header'
-import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue, } from 'recoil';
+import { useRecoilValue } from 'recoil';
+import { themeState } from '../recoil/atoms'
 
 
 const Home: NextPage = () => {
   return (
-    <RecoilRoot>
-      <div className={styles.container} data-theme="bumblebee">
+      <div className={styles.container} data-theme={useRecoilValue(themeState)}>
         <Head>
           <title>Candyplex</title>
           <meta name="description" content="Candy Machine + Metaplex" />
@@ -43,7 +43,6 @@ const Home: NextPage = () => {
           </a>
         </footer>
       </div>
-    </RecoilRoot>
   )
 }
 

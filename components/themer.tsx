@@ -1,5 +1,6 @@
 import { Transition, Menu } from "@headlessui/react";
-import React, { Component } from 'react'
+import React from 'react'
+import { themeState } from '../recoil/atoms'
 import { atom, useRecoilState } from "recoil";
 
 // interface ITHEMES = {
@@ -98,18 +99,9 @@ const THEMES = [
     }
 ];
 
-console.log(THEMES.length)
-
-
-const activeThemeState = atom({
-    key: 'activeTheme', // unique ID (with respect to other atoms/selectors)
-    default: 'light', // default value (aka initial value)
-});
-
-
-
 export const Themer = () => {
-    const [theme, setTheme] = useRecoilState(activeThemeState);
+    const [theme, setTheme] = useRecoilState( themeState);
+    console.log(theme)
     return (
         <Menu as="div" className="relative inline-block">
             {({ open }) => (
@@ -138,7 +130,7 @@ export const Themer = () => {
                                 THEMES.map((key) =>
                                     <Menu.Item key={key.name}>
                                         <li>
-                                            <a className="p-0">{key.title}</a>
+                                            <a className="p-0" onClick={() => setTheme(key.name)} >{key.title}</a>
                                         </li>
                                     </Menu.Item>)
                             }
