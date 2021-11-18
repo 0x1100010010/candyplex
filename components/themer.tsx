@@ -1,5 +1,106 @@
 import { Transition, Menu } from "@headlessui/react";
 import React, { Component } from 'react'
+import { atom } from "recoil";
+
+
+const  THEMES = [
+    {   
+        name: "light",
+        title: "🌝 light"
+    },
+    { 
+        name: "dark",
+        title: "🌚 dark"
+    },
+    { 
+        name: "cupcake",
+        title: "🧁 cupcake"
+    },
+    { 
+        name: "bumblebee",
+        title: "🐝 bumblebee"
+    },
+    { 
+        name: "emerald",
+        title: "✳️  Emerald"
+    },
+    { 
+        name: "corporate",
+        title: "🏢 Corporate"
+    },
+    { 
+        name: "synthwave",
+        title: "🌃 synthwave"
+    },
+    { 
+        name: "retro",
+        title: "👴 retro"
+    },
+    { 
+        name: "cyberpunk",
+        title: "🤖 cyberpunk"
+    },
+    { 
+        name: "valentine",
+        title: "🌸 valentine"
+    },
+    { 
+        name: "halloween",
+        title: "🎃 halloween"
+    },
+    { 
+        name: "garden",
+        title: "🌷 garden"
+    },
+    { 
+        name: "forest",
+        title: "🌲 forest"
+    },
+    { 
+        name: "aqua",
+        title: "🐟 aqua"
+    },
+    { 
+        name: "lofi",
+        title: "👓 lofi"
+    },
+    { 
+        name: "pastel",
+        title: "🖍 pastel"
+    },
+    { 
+        name: "fantasy",
+        title: "🧚‍♀️ fantasy"
+    },
+    { 
+        name: "Wireframe",
+        title: "📝 Wireframe"
+    },
+    { 
+        name: "black",
+        title: "🏴 black"
+    },
+    { 
+        name: "luxury",
+        title: "💎 luxury"
+    },
+    { 
+        name: "dracula",
+        title: "🧛‍♂️ dracula"
+    },
+    { 
+        name: "CMYK",
+        title: "🖨 CMYK"
+    }
+];
+
+console.log(THEMES.length)
+
+
+const activeTheme = atom({
+    key: 'activeTheme', // unique ID (with respect to other atoms/selectors)
+    default: '🌝 light', // default value (aka initial value)
+});
 
 export default class Themer extends Component {
     render() {
@@ -27,9 +128,7 @@ export default class Themer extends Component {
                                 static
                                 className="focus:outline-none right-0 menu p-3 shadow-lg rounded-box rounded-box absolute w-56 mt-2"
                             >
-                                <Menu.Item>
-                                    <li><a>Item 1</a></li>
-                                </Menu.Item>
+                                { THEMES.map((key) => <Menu.Item><li key={key.name}><a className="p-0">{key.title}</a></li></Menu.Item>)}
                             </Menu.Items>
                         </Transition>
                     </>
