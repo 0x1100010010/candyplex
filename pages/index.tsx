@@ -6,13 +6,15 @@ import Header from '../components/header'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container + "bg-red-900"} data-theme="cyberpunk">
+    <div className={styles.container}>
       <Head>
         <title>Candyplex</title>
         <meta name="description" content="Candy Machine + Metaplex" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header></Header>
+      <div className="my-3">
+        <Header></Header>
+        </div>
       <main className={styles.main} >
 
 
