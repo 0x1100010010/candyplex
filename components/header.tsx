@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Themer from './themer'
+import {Themer} from './themer'
 
-export default class Header extends Component {
-    render() {
+export const Header = () => {
         return (
             <div className="navbar flex justify-between mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
                 <div>
@@ -17,7 +16,7 @@ export default class Header extends Component {
                         <div className="flex items-stretch">
                             <a className="btn btn-ghost btn-sm rounded-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 mr-2 stroke-current">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                                 </svg>
                                 Config
 
@@ -31,4 +30,3 @@ export default class Header extends Component {
 
         )
     }
-}

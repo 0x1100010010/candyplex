@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Header from '../components/header'
+import {Header} from '../components/header'
 import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue, } from 'recoil';
 
 
@@ -24,19 +24,6 @@ const Home: NextPage = () => {
           <h1 className={styles.title}>
             Welcome to <a href="https://github.com/bashforger/candyplex">Candyplex</a>
           </h1>
-
-          <p className={styles.description}>
-            Get started by editing{' '}
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-          <div>
-            <div className="grid w-32 h-20 rounded bg-primary text-primary-content place-content-center">1</div>
-            <div className="grid w-32 h-20 rounded bg-accent text-accent-content place-content-center">2</div>
-            <div className="grid w-32 h-20 rounded bg-secondary text-secondary-content place-content-center">3</div>
-          </div>
-
-
-
 
           <div>
 
