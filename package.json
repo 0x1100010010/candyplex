@@ -10,6 +10,15 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@metaplex/arweave-cost": "^2.0.0",
+    "@metaplex/js": "^4.3.0",
+    "@metaplex/react": "^1.0.2",
+    "@solana/spl-token": "^0.1.8",
+    "@solana/wallet-adapter-base": "^0.7.0",
+    "@solana/wallet-adapter-react": "^0.13.1",
+    "@solana/wallet-adapter-react-ui": "^0.6.1",
+    "@solana/wallet-adapter-wallets": "^0.11.3",
+    "@solana/web3.js": "^1.30.2",
     "@tailwindcss/typography": "^0.4.1",
     "daisyui": "^1.16.2",
     "next": "12.0.4",
@@ -24,6 +33,7 @@
     "classnames": "^2.3.1",
     "eslint": "7",
     "eslint-config-next": "12.0.4",
+    "next-transpile-modules": "^9.0.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "4.5.2"
