@@ -1,7 +1,7 @@
 import { Transition, Menu } from "@headlessui/react";
 import React from 'react'
-import { themeState } from '../recoil/atoms'
-import { atom, useRecoilState } from "recoil";
+import { themeState } from '../../recoil/atoms'
+import { useRecoilState } from "recoil";
 
 // interface ITHEMES = {
 //     name: string;

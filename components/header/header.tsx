@@ -1,6 +1,4 @@
-import React, { Component } from 'react'
-import {Themer} from './themer'
-
+import { Themer} from '../index'
 export const Header = () => {
         return (
             <div className="navbar flex justify-between mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
@@ -23,7 +21,6 @@ export const Header = () => {
                             </a>
                         </div>
                     </div>
-
                     <Themer></Themer>
                 </div>
             </div>
