@@ -12,6 +12,8 @@ import Countdown from "react-countdown";
 import useWalletNfts from "../hooks/useWalletNFTs";
 import AnNFT from "../components/AnNFT/AnNFT";
 import {Stats} from "../components/Stats";
+import {userStatsState} from "../recoil/atoms"
+import { useRecoilValue } from "recoil";
 
 export default function Home() {
   const [balance] = useWalletBalance();
@@ -101,7 +103,7 @@ export default function Home() {
 
         <Stats/>
 
-
+        {useRecoilValue(userStatsState)}
         {connected && (
           <p className="mr-auto text-sm">
             <span className="font-bold">Available/Minted/Total:</span>{" "}
