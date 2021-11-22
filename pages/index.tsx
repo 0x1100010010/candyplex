@@ -11,6 +11,7 @@ import { Toaster } from "react-hot-toast";
 import Countdown from "react-countdown";
 import useWalletNfts from "../hooks/useWalletNFTs";
 import AnNFT from "../components/AnNFT/AnNFT";
+import {Stats} from "../components/Stats";
 
 export default function Home() {
   const [balance] = useWalletBalance();
@@ -65,7 +66,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>next-candy-machine</title>
+        <title>Candyplex</title>
         <meta
           name="description"
           content="Simplified NextJs with typescript example app integrated with Metaplex's Candy Machine"
@@ -76,7 +77,7 @@ export default function Home() {
       <div className="flex flex-col items-center min-h-screen mx-6">
         <Toaster />
         <div className="flex items-center justify-between w-full mt-3">
-          <h1 className="text-2xl font-bold">next-candy-machine</h1>
+          <h1 className="text-2xl font-bold">Candyplex</h1>
           <div className="flex items-center">
             {connected && (
               <div className="flex items-end mr-2">
@@ -97,6 +98,10 @@ export default function Home() {
             <WalletMultiButton />
           </div>
         </div>
+
+        <Stats/>
+
+
         {connected && (
           <p className="mr-auto text-sm">
             <span className="font-bold">Available/Minted/Total:</span>{" "}
