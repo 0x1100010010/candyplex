@@ -1,4 +1,5 @@
-export const Stats = () => {
+export const Stats = (props: any) => {
+
     return (
         <div className="w-full shadow stats">
             <div className="stat">
@@ -8,29 +9,21 @@ export const Stats = () => {
                     </svg>
                 </div>
                 <div className="stat-title">NFTs</div>
-                <div className="stat-value">Available# 0</div>
-                <div className="stat-desc">Jan 1st - Feb 1st</div>
+
+                {props.total>0 ?
+                <div className="stat-value text-success">Total  {props.total}</div>
+                : <div className="stat-value text-danger">Total  {props.total}</div>}
+                
+                {props.available>0 ? 
+                <div className="stat-desc text-success">Available  {props.available}</div>
+                : <div className="stat-desc text-error ">Available  {props.available}</div>}
+
+                {props.minted>0 ?
+                <div className="stat-desc text-success">Minted  {props.minted}</div>
+                : <div className="stat-desc text-error">Minted  {props.minted}</div>}
+
             </div>
-            <div className="stat">
-                <div className="stat-figure text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-                    </svg>
-                </div>
-                <div className="stat-title">New Users</div>
-                <div className="stat-value">4,200</div>
-                <div className="stat-desc text-success">↗︎ 400 (22%)</div>
-            </div>
-            <div className="stat">
-                <div className="stat-figure text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
-                    </svg>
-                </div>
-                <div className="stat-title">New Registers</div>
-                <div className="stat-value">1,200</div>
-                <div className="stat-desc text-error">↘︎ 90 (14%)</div>
-            </div>
+            
         </div>
     )
 }

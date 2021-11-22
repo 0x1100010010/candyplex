@@ -101,7 +101,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Stats/>
+        <Stats available={nftsData.itemsRemaining} minted={nftsData.itemsRedeemed} total={nftsData.itemsAvailable}/>
 
         {useRecoilValue(userStatsState)}
         {connected && (
